@@ -1,5 +1,7 @@
 import numpy as np
 from kalman_filter import KF 
+import matplotlib.pyplot as plt
+
 
 #1차원에서 위치 추정 시뮬레이션
 
@@ -41,8 +43,6 @@ for t in times:
     estimated_positions.append(estimated_state[0])
 
 # 결과 출력
-import matplotlib.pyplot as plt
-
 plt.figure(figsize=(10, 6))
 plt.plot(times, true_positions, label='True Position')
 plt.plot(times, measured_positions, 'r.', label='Measured Position')
